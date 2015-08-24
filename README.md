@@ -1,5 +1,12 @@
 iSniff GPS
 ==========
+iSniff GPS被动嗅探的SSID探头，ARP及MDNS（卓悦）数据包由附近的iPhone，iPad和其他无线设备广播。这样做的目的是收集，数据可用于识别每个设备并确定先前的地理位置仅仅基于每个设备公开关于先前加入无线网络的信息。
+
+iOS设备发送的ARP有时包含先前加入WiFi网络的MAC地址（的BSSID），如[1]中描述。 iSniff GPS捕获这些ARP及提交MAC地址，以苹果的WiFi定位服务（伪装成iOS设备）来获取GPS坐标对于给定的BSSID。如果只有SSID探头已拍摄的特定设备，iSniff GPS可以查询网络名称上wigle.net和可视化可能的位置。
+
+通过地理定位多个SSID和WiFi路由器的MAC地址，能够以确定的装置（并且暗示其所有者）可能已。
+
+下图：在墨尔本WiFi路由器的位置可视化，AU返回苹果定位服务
 
 iSniff GPS passively sniffs for SSID probes, ARPs and MDNS (Bonjour) packets broadcast by nearby iPhones, iPads and other wireless devices.
 The aim is to collect data which can be used to identify each device and determine previous geographical locations, based solely on information each device discloses about previously joined WiFi networks.
